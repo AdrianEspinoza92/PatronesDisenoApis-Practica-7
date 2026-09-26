@@ -36,6 +36,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: node-app
+          include-hidden-files: true
           path: |
             frontend/dist
             frontend/node_modules
