@@ -1,0 +1,9 @@
+<header><p class="eyebrow">STACK MEAN · PRÁCTICA 03</p><h1>Gestión de empleados</h1><p>Arquitectura desacoplada, validada y reactiva.</p></header>
+<main>
+  @if (error$ | async; as error) { <p class="alert">{{ error }}</p> }
+  @if (loading$ | async) { <p class="loading">Procesando…</p> }
+  <div class="layout">
+    <app-employee-form [employee]="selected" (save)="save($event)" (cancel)="cancel()" />
+    <app-employee-list [employees]="(employees$ | async) ?? []" (edit)="select($event)" (remove)="remove($event)" />
+  </div>
+</main>

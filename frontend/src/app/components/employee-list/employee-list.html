@@ -1,0 +1,19 @@
+<section>
+  <h2>Personal registrado</h2>
+  @if (employees.length === 0) {
+    <p class="empty">Aún no existen empleados. Registra el primero.</p>
+  } @else {
+    <div class="table-wrap"><table>
+      <thead><tr><th>Nombre</th><th>Cargo</th><th>Departamento</th><th>Sueldo</th><th>Acciones</th></tr></thead>
+      <tbody>
+        @for (employee of employees; track employee.id) {
+          <tr>
+            <td>{{ employee.nombre }}</td><td>{{ employee.cargo }}</td><td>{{ employee.departamento }}</td>
+            <td>{{ employee.sueldo | currency:'USD' }}</td>
+            <td class="actions"><button (click)="edit.emit(employee)">Editar</button><button class="danger" (click)="remove.emit(employee.id)">Eliminar</button></td>
+          </tr>
+        }
+      </tbody>
+    </table></div>
+  }
+</section>

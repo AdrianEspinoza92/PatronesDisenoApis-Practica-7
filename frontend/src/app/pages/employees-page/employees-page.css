@@ -1,0 +1,6 @@
+:host { min-height: 100vh; display: block; background: #f3f7fa; color: #17324d; }
+header { padding: 3rem max(1.5rem, calc((100vw - 1180px) / 2)); background: linear-gradient(135deg, #092e4f, #1261a0); color: white; }
+header h1 { font-size: clamp(2rem, 5vw, 3.4rem); margin: .25rem 0; } header p { margin: 0; opacity: .85; } .eyebrow { font-weight: 800; letter-spacing: .12em; font-size: .75rem; }
+main { max-width: 1180px; padding: 2rem 1.5rem; margin: auto; } .layout { display: grid; grid-template-columns: minmax(260px, 340px) 1fr; gap: 1.5rem; align-items: start; }
+.alert { background: #fee4e2; color: #912018; padding: 1rem; border-radius: 8px; } .loading { color: #1261a0; font-weight: 700; }
+@media (max-width: 800px) { .layout { grid-template-columns: 1fr; } }

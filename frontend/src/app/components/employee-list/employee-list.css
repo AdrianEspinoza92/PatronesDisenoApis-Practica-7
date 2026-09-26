@@ -1,0 +1,5 @@
+section { background: white; border-radius: 16px; padding: 1.5rem; box-shadow: 0 12px 30px #17324d12; }
+h2 { margin-top: 0; } .table-wrap { overflow-x: auto; } table { width: 100%; border-collapse: collapse; }
+th, td { padding: .9rem; text-align: left; border-bottom: 1px solid #e5ebf1; } th { color: #52697f; font-size: .8rem; text-transform: uppercase; }
+.actions { display: flex; gap: .5rem; } button { border: 0; border-radius: 7px; padding: .5rem .75rem; color: white; background: #1261a0; cursor: pointer; }
+.danger { background: #b42318; } .empty { color: #637589; padding: 2rem 0; text-align: center; }

@@ -1,0 +1,11 @@
+<form (ngSubmit)="submit()" #employeeForm="ngForm">
+  <h2>{{ employee ? 'Editar empleado' : 'Nuevo empleado' }}</h2>
+  <label>Nombre<input name="nombre" [(ngModel)]="form.nombre" minlength="3" required /></label>
+  <label>Cargo<input name="cargo" [(ngModel)]="form.cargo" minlength="3" required /></label>
+  <label>Departamento<input name="departamento" [(ngModel)]="form.departamento" minlength="3" required /></label>
+  <label>Sueldo<input name="sueldo" [(ngModel)]="form.sueldo" type="number" min="0" required /></label>
+  <div class="actions">
+    <button type="submit" [disabled]="employeeForm.invalid">{{ employee ? 'Actualizar' : 'Guardar' }}</button>
+    @if (employee) { <button type="button" class="secondary" (click)="cancel.emit()">Cancelar</button> }
+  </div>
+</form>

@@ -1,0 +1,11 @@
+[Unit]
+Description=Ejecutar el monitor de Practica 7 cada 30 segundos
+
+[Timer]
+OnBootSec=15s
+OnUnitActiveSec=30s
+AccuracySec=1s
+Unit=practica7-monitor.service
+
+[Install]
+WantedBy=timers.target

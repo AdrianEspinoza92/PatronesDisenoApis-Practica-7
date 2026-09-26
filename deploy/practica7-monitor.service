@@ -1,0 +1,12 @@
+[Unit]
+Description=Monitor de salud de la API Practica 7
+After=network-online.target pm2-ubuntu.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+EnvironmentFile=/etc/practica7-monitor.env
+ExecStart=/var/www/practica7/deploy/health-monitor.sh
+
+[Install]
+WantedBy=multi-user.target
